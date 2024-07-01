@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>New</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
@@ -33,7 +33,7 @@
                     </c:forEach>
                 </form:select>
             </div>
-            <input type="submit" class="btn btn-success mt-3" value="Edit" >
+            <input type="submit" class="btn btn-success mt-3" value="Create" >
             <a href="/tasks" class="btn btn-danger mt-3" >Cancel</a>
 		</form:form>
 	</div>

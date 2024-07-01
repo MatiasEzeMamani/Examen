@@ -39,7 +39,7 @@
 			<form:hidden path="id" value="${task.id}" />
 			<input type="hidden" value="put" name="_method" >
 			
-            <input type="submit" class="btn btn-success mt-3" value="Save" >
+            <input type="submit" class="btn btn-success mt-3" value="Edit" >
             <a href="/tasks" class="btn btn-danger mt-3" >Cancel</a>
 		</form:form>
 		
