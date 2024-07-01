@@ -34,17 +34,14 @@ public class TaskController {
 	public String tasks(HttpSession session, Model model) {
 		
 		/*REVISION DE SESION*/
-		User userTemp = (User) session.getAttribute("userInSession"); //Obj User o null
+		User userTemp = (User) session.getAttribute("userInSession"); 
 		if(userTemp == null) {
 			return "redirect:/";
 		}
 		/*REVISION DE SESION*/
 		
 
-	    // Obtener todas las tareas
-	    List<Task> allTasks = ts.findAllTasks(); // Necesitarás un método findAllTasks en el servicio TaskService
-
-	    // Añadir las tareas al modelo
+	    List<Task> allTasks = ts.findAllTasks(); 
 	    model.addAttribute("tasks", allTasks);
 		
 		return "tasks.jsp";
@@ -55,7 +52,7 @@ public class TaskController {
 						   @ModelAttribute("task") Task task,
 						   Model model) {
 		/*REVISION DE SESION*/
-		User userTemp = (User) session.getAttribute("userInSession"); //Obj User o null
+		User userTemp = (User) session.getAttribute("userInSession"); 
 		if(userTemp == null) {
 			return "redirect:/";
 		}
@@ -78,7 +75,7 @@ public class TaskController {
 							 HttpSession session,
 							 Model model) {
 		/* === REVISAMOS SESION === */
-		User userTemp = (User) session.getAttribute("userInSession"); //Obj User o null
+		User userTemp = (User) session.getAttribute("userInSession"); 
 		if(userTemp == null) {
 			return "redirect:/";
 		}
@@ -105,7 +102,7 @@ public class TaskController {
 					   HttpSession session,
 					   Model model) {
 		/*REVISION DE SESION*/
-		User userTemp = (User) session.getAttribute("userInSession"); //Obj User o null
+		User userTemp = (User) session.getAttribute("userInSession"); 
 		if(userTemp == null) {
 			return "redirect:/";
 		}
@@ -152,7 +149,7 @@ public class TaskController {
 			                 BindingResult result,
 			                 Model model) {
 		/*REVISION DE SESION*/
-		User userTemp = (User) session.getAttribute("userInSession"); //Obj User o null
+		User userTemp = (User) session.getAttribute("userInSession"); 
 		if(userTemp == null) {
 			return "redirect:/";
 		}
@@ -184,7 +181,7 @@ public class TaskController {
     public String orderAsc(HttpSession session, Model model) {
 		
 		/*REVISION DE SESION*/
-		User userTemp = (User) session.getAttribute("userInSession"); //Obj User o null
+		User userTemp = (User) session.getAttribute("userInSession"); 
 		if(userTemp == null) {
 			return "redirect:/";
 		}
@@ -200,7 +197,7 @@ public class TaskController {
     public String orderDesc(HttpSession session, Model model) {
 		
 		/*REVISION DE SESION*/
-		User userTemp = (User) session.getAttribute("userInSession"); //Obj User o null
+		User userTemp = (User) session.getAttribute("userInSession"); 
 		if(userTemp == null) {
 			return "redirect:/";
 		}

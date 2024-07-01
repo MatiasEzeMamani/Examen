@@ -39,16 +39,16 @@ public class User {
 	private String lastName;
 	
 	@NotEmpty(message="Email is required.")
-	@Email(message="Invalid email") //Verifica que sea un correo electrónico válido
+	@Email(message="Invalid email") 
 	private String email;
 	
 	@NotEmpty(message="Password is required.")
-	@Size(min=6, message="Password needs at least 6 chars")
+	@Size(min=6, message="Password needs at least 8 chars")
 	private String password;
 	
-	@Transient //No se guarde el dato en BD
+	@Transient 
 	@NotEmpty(message="Confirmation is required.")
-	@Size(min=6, message="Confirmation needs at least 6 chars")
+	@Size(min=6, message="Confirmation needs at least 8 chars")
 	private String confirm;
 	
 	@OneToMany(mappedBy="creator", fetch=FetchType.LAZY)
